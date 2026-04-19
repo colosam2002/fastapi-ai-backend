@@ -6,6 +6,11 @@ from pydantic import ValidationError
 
 from models import CopilotResponse
 
+import os
+from dotenv import load_dotenv
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 client = OpenAI()
 
 INSTRUCTIONS = """

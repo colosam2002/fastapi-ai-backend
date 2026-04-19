@@ -3,6 +3,11 @@ from fastapi import HTTPException
 from knowledge_base import documents
 import math
 
+import os
+from dotenv import load_dotenv
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 client = OpenAI()
 
 def create_embedding(text: str) -> list[float]:
