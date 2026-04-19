@@ -5,7 +5,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/fastapi-ai-backend.git
+git clone https://github.com/colosam2002/fastapi-ai-backend.git
 cd fastapi-ai-backend
 ```
 ### 2. Create a Virtual Environment
