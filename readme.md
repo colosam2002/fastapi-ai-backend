@@ -26,12 +26,13 @@ pip install -r requirements.txt
 ### 4. Configure Environment Variables
 
 Create a .env file in the project root:
-
+```bash
 OPENAI_API_KEY=your_api_key_here
 DATABASE_URL=postgresql://user:password@localhost/database_name
 SECRET_KEY=your_jwt_secret_key
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=60
+```
 
 ### 5. Create PostgreSQL Database
 
@@ -122,6 +123,7 @@ Basic RAG system:
 
 
 ### Project Structure
+```bash
 fastapi-ai-backend/
 │
 ├── main.py
@@ -141,6 +143,7 @@ fastapi-ai-backend/
     ├── knowledge.py
     ├── copilot.py
     └── ask.py
+```
 
 ### Future Improvements
 - Frontend UI instead of relying only on /docs
