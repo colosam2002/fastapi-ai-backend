@@ -7,16 +7,23 @@
 ```bash
 git clone https://github.com/YOUR_USERNAME/fastapi-ai-backend.git
 cd fastapi-ai-backend
-2. Create a Virtual Environment
+```
+### 2. Create a Virtual Environment
 Linux / macOS / WSL
+```bash
 python -m venv venv
 source venv/bin/activate
+```
 Windows
+```bash
 python -m venv venv
 venv\Scripts\activate
-3. Install Dependencies
+```
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
-4. Configure Environment Variables
+```
+### 4. Configure Environment Variables
 
 Create a .env file in the project root:
 
@@ -25,13 +32,19 @@ DATABASE_URL=postgresql://user:password@localhost/database_name
 SECRET_KEY=your_jwt_secret_key
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=60
-5. Create PostgreSQL Database
+
+### 5. Create PostgreSQL Database
 
 Make sure PostgreSQL is installed and create a database.
 
+```SQL
 CREATE DATABASE api_db;
-6. Run the Application
+```
+
+### 6. Run the Application
+```bash
 uvicorn main:app --reload
+```
 
 The API will be available at:
 
@@ -41,18 +54,19 @@ Interactive Swagger documentation:
 
 http://127.0.0.1:8000/docs
 
-What This Project Does
+## What This Project Does
 
 This project is a FastAPI backend that combines a traditional API architecture with modern AI-powered features.
 
-Full Backend System
-User registration
-JWT authentication login
-Notes management per user
-Protected private endpoints
+### Full Backend System
+- User registration
+- JWT authentication login
+- Notes management per user
+- Protected private endpoints
 
-AI Features
-/ask
+### AI Features
+
+#### /ask
 
 Allows users to ask general questions to the model.
 
@@ -62,7 +76,7 @@ Example request:
   "question": "What is FastAPI?"
 }
 
-/copilot
+#### /copilot
 
 Receives a text and returns:
 
@@ -75,38 +89,39 @@ Example request:
 {
   "text": "My original text..."
 }
-/knowledge/search
+
+#### /knowledge/search
 
 Semantic search system over internal texts using embeddings.
 
 Finds relevant information based on meaning, not only keyword matching.
 
-/knowledge/ask
+#### /knowledge/ask
 
 Basic RAG system:
 
-Receives a question
-Searches relevant texts using embeddings
-Uses those texts as context
-Generates a context-aware answer
+- Receives a question
+- Searches relevant texts using embeddings
+- Uses those texts as context
+- Generates a context-aware answer
 
 
-Technologies Used
-Python 3.12+
-FastAPI
-Uvicorn
-PostgreSQL
-SQLAlchemy
-Pydantic
-JWT Authentication
-Passlib / bcrypt
-OpenAI API
-Embeddings
-Semantic Search
-Basic RAG
+### Technologies Used
+- Python 3.12+
+- FastAPI
+- Uvicorn
+- PostgreSQL
+- SQLAlchemy
+- Pydantic
+- JWT Authentication
+- Passlib / bcrypt
+- OpenAI API
+- Embeddings
+- Semantic Search
+- Basic RAG
 
 
-Project Structure
+### Project Structure
 fastapi-ai-backend/
 │
 ├── main.py
@@ -127,14 +142,14 @@ fastapi-ai-backend/
     ├── copilot.py
     └── ask.py
 
-Future Improvements
-Frontend UI instead of relying only on /docs
-File upload per user
-Embedding persistence
-Vector database (pgvector)
-User-specific RAG
-Cloud deployment
+### Future Improvements
+- Frontend UI instead of relying only on /docs
+- File upload per user
+- Embedding persistence
+- Vector database (pgvector)
+- User-specific RAG
+- Cloud deployment
 
-Author
+### Author
 
 Project developed as part of a practical roadmap focused on backend engineering + applied AI systems.
